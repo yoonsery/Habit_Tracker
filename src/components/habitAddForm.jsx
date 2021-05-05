@@ -1,15 +1,23 @@
 import React, { Component } from 'react';
 
 class HabitAddForm extends Component {
+  formRef = React.createRef();
   inputRef = React.createRef();
   onSubmit = (event) => {
     event.preventDefault();
-    console.log(this.inputRef.current.value);
+    const name = this.inputRef.current.value;
+    if (name.trim() === '') {
+      this.formRef.current.reset();
+      return;
+    }
+    name && this.props.onAdd(name);
+    this.formRef.current.reset();
+    // this.inputRef.current.value = ''; // reset 말고 이렇게도 가능
   };
 
   render() {
     return (
-      <form className="add-form" onSubmit={this.onSubmit}>
+      <form ref={this.formRef} className="add-form" onSubmit={this.onSubmit}>
         <input
           type="text"
           className="add-input"
