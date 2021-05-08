@@ -1,13 +1,6 @@
 import React, { memo } from 'react';
 
 const Habit = memo(({ habit, onIncrement, onDecrement, onDelete }) => {
-  const componentDidMount = () => {
-    console.log(`habit: ${habit.name} mounted`);
-  };
-
-  const componentWillUnmount = () => {
-    console.log(`habit: ${habit.name} will unmount`);
-  };
   const handleIncrement = () => {
     onIncrement(habit);
   };
