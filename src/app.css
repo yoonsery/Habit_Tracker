@@ -1,5 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
 * {
   box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
 }
 
 button {
@@ -8,56 +16,95 @@ button {
   cursor: pointer;
 }
 
+ul {
+  margin: 0;
+}
+
+.container {
+  max-width: 38rem;
+  margin: 3rem auto;
+  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 0.4rem;
+  padding-bottom: 2rem;
+}
+
 .navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   font-size: 2rem;
-  padding: 1em;
-  background-color: blanchedalmond;
+  padding: 0.5em 1em;
+  background-color: #ffe9d6;
+  text-align: center;
+  border-radius: 0.4rem 0.4rem 0 0;
 }
 
 .navbar-logo {
-  color: green;
+  color: #de8971;
   margin-right: 0.5em;
 }
 
 .navbar-count {
-  display: inline-block;
   text-align: center;
   font-size: 2rem;
   width: 2.5rem;
   height: 2.5rem;
   line-height: 2.5rem;
   margin-left: 0.2em;
-  background-color: green;
+  background-color: #a7d0cd;
   color: white;
   border-radius: 50%;
 }
 
+.habits-reset {
+  font-family: inherit;
+  font-size: 1.2rem;
+  margin-left: 2rem;
+  padding: 0.2em 1em;
+  background-color: #7b6079;
+  color: white;
+  border-radius: 0.5rem;
+}
+
 .add-form {
   display: flex;
-  margin: 0.5em;
+  justify-content: center;
+  margin-top: 1em;
 }
 
 .add-input {
   margin-right: 0.2em;
   font-size: 1.5rem;
+  width: 60%;
+  border: 1px solid #b1b1ac;
+  border-radius: 0.2rem;
 }
 
 .add-input::placeholder {
+  font-family: 'Muli';
+  font-size: 1.5rem;
   color: #00800058;
+  padding: 0.5rem;
 }
 
 .add-button {
   height: 100%;
   font-size: 1.2rem;
   padding: 0.3em 0.5em;
-  background-color: green;
+  background-color: #eba83a;
   color: white;
+  border-radius: 0.2rem;
 }
 
 .habit {
-  font-size: 2.5rem;
+  position: relative;
+  font-size: 2.3rem;
   padding: 0.5em;
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
 }
 
 .habit-count {
@@ -69,9 +116,16 @@ button {
   line-height: 2.5rem;
   margin-left: 0.2em;
   margin-right: 0.5em;
-  background-color: darkseagreen;
+  background-color: #a7d0cd;
   color: white;
   border-radius: 50%;
+}
+
+.button-container {
+  position: absolute;
+  left: 65%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .habit-button {
@@ -86,17 +140,40 @@ button {
 
 .habit-increase,
 .habit-decrease {
-  color: goldenrod;
+  color: #de8971;
 }
 
 .habit-delete {
   font-size: 2rem;
-  color: darkred;
+  color: #779f9c;
 }
 
-.habits-reset {
-  font-size: 1.5rem;
-  padding: 0.2em 1em;
-  background-color: green;
-  color: white;
+@media screen and (max-width: 32rem) {
+  .habit {
+    flex-direction: column;
+  }
+
+  .habit-name {
+    font-size: 1.8rem;
+  }
+
+  .habit-count {
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .button-container {
+    position: relative;
+    left: 0;
+    top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .habit-button {
+    font-size: 2rem;
+  }
 }

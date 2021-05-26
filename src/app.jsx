@@ -5,8 +5,8 @@ import Navbar from './components/navbar';
 
 const App = () => {
   const [habits, setHabits] = useState([
-    { id: 1, name: 'Reading', count: 0 },
-    { id: 2, name: 'Coding', count: 0 },
+    { id: 1, name: 'Coding', count: 0 },
+    { id: 2, name: 'Reading', count: 0 },
     { id: 3, name: 'Walking', count: 0 },
   ]);
 
@@ -53,17 +53,19 @@ const App = () => {
   }, []);
 
   return (
-    <>
-      <Navbar totalCount={habits.filter((item) => item.count > 0).length} />
+    <div className="container">
+      <Navbar
+        totalCount={habits.filter((item) => item.count > 0).length}
+        onReset={handleReset}
+      />
       <Habits
         habits={habits}
         onIncrement={handleIncrement}
         onDecrement={handleDecrement}
         onDelete={handleDelete}
         onAdd={handleAdd}
-        onReset={handleReset}
       />
-    </>
+    </div>
   );
 };
 

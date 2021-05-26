@@ -6,6 +6,9 @@ const Navbar = memo((props) => {
       <i className="navbar-logo fab fa-pagelines"></i>
       <span>Habit Tracker</span>
       <span className="navbar-count">{props.totalCount}</span>
+      <button className="habits-reset" onClick={props.onReset}>
+        Reset All
+      </button>
     </nav>
   );
 });
