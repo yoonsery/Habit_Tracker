@@ -11,7 +11,7 @@ Users are able to
 - see the list of habits
 - see & control the frequency of habit
 
-## What I learn
+## 💡 What I learn
 
 - create react-app
 - JSX
@@ -27,7 +27,7 @@ Users are able to
 - setState
 - useEffect
 
-### Reason you should not change State directly
+### ✍🏻 Reason you should not change State directly
 
 - Changing object directly causes unexpected error, so that
   the object already exists should be immutable
