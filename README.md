@@ -2,7 +2,7 @@
 
 It tracks your habit!
 
-##Features
+## Features
 
 Users are able to
 
