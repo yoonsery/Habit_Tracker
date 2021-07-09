@@ -1,8 +1,8 @@
-# Habit Tracker
+# [Habit Tracker](https://sery-habit-tracker.netlify.app/)
 
 It tracks your habit!
 
-## features
+##Features
 
 Users are able to
 
@@ -33,3 +33,24 @@ Users are able to
   the object already exists should be immutable
 - setState is asynchronous
 - PureComponent do a shallow comparison
+
+### To prevent enroll empty string use trim()
+
+```js
+  if (name.trim() === '') {
+      formRef.current.reset();
+      return;
+    }
+```
+
+## Setup
+
+Install dependencies
+```sh
+$ npm install
+```
+
+Run application
+```sh
+$ npm start
+```
