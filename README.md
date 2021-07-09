@@ -11,21 +11,21 @@ Users are able to
 - see the list of habits
 - see & control the frequency of habit
 
-## 💡 What I learn
+## What I Learn
 
-- create react-app
-- JSX
-- Class Component
-- Function Component
-- Lifecycle methods
-- React Hook
-- Pure Component
-- memo(Higher Order Component)
-- synthetic event
-- state & Props
-- Refs
-- setState
-- useEffect
+- [x] create react-app
+- [x] JSX
+- [x] Class Component
+- [x] Function Component
+- [x] Lifecycle methods
+- [x] React Hook
+- [x] Pure Component
+- [x] memo(Higher Order Component)
+- [x] synthetic event
+- [x] state & Props
+- [x] Refs
+- [x] setState
+- [x] useEffect
 
 ## Note ✍🏻
 
