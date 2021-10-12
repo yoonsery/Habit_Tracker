@@ -24,3 +24,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# practice file
+/src/components/simpleHabit.jsx
+
+# Local Netlify folder
+.netlify
+
+.history/

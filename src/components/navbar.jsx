@@ -3,12 +3,9 @@ import React, { memo } from 'react';
 const Navbar = memo((props) => {
   return (
     <nav className="navbar">
-      <i className="navbar-logo fab fa-pagelines"></i>
+      <i className="navbar-logo fas fa-leaf"></i>
       <span>Habit Tracker</span>
       <span className="navbar-count">{props.totalCount}</span>
-      <button className="habits-reset" onClick={props.onReset}>
-        Reset All
-      </button>
     </nav>
   );
 });

@@ -54,16 +54,14 @@ const App = () => {
 
   return (
     <div className="container">
-      <Navbar
-        totalCount={habits.filter((item) => item.count > 0).length}
-        onReset={handleReset}
-      />
+      <Navbar totalCount={habits.filter((item) => item.count > 0).length} />
       <Habits
         habits={habits}
         onIncrement={handleIncrement}
         onDecrement={handleDecrement}
         onDelete={handleDelete}
         onAdd={handleAdd}
+        onReset={handleReset}
       />
     </div>
   );

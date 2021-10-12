@@ -24,7 +24,7 @@ const HabitAddForm = memo((props) => {
           ref={inputRef}
           type="text"
           className="add-input"
-          placeholder="Please enter your habit"
+          placeholder="new habit"
         />
         <button className="add-button">Add</button>
       </form>
