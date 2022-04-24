@@ -10,7 +10,7 @@ describe('habitPresenter', () => {
   let update;
 
   beforeEach(() => {
-    presenter = new HabitPresenter(habits);
+    presenter = new HabitPresenter(habits, 3);
     update = jest.fn();
   });
 
@@ -53,6 +53,15 @@ describe('habitPresenter', () => {
     expect(presenter.getHabits().length).toBe(3);
     expect(presenter.getHabits()[2].name).toBe('Eating');
     expect(presenter.getHabits()[2].count).toBe(0);
+    checkUpdateIsCalled();
+  });
+
+  it('throws an error when the max habits limit is exceeded', () => {
+    presenter.add('Eating', update);
+    expect(() => {
+      presenter.add('Sleeping', update);
+    }).toThrow('The number of habits can not be more than 3');
+
     checkUpdateIsCalled();
   });
 
