@@ -65,12 +65,24 @@ describe('habitPresenter', () => {
     checkUpdateIsCalled();
   });
 
-  it('resets all habits counts to 0', () => {
-    presenter.reset(update);
+  describe('reset', () => {
+    it('set all habits counts to 0', () => {
+      presenter.reset(update);
 
-    expect(presenter.getHabits()[0].count).toBe(0);
-    expect(presenter.getHabits()[1].count).toBe(0);
-    checkUpdateIsCalled();
+      expect(presenter.getHabits()[0].count).toBe(0);
+      expect(presenter.getHabits()[1].count).toBe(0);
+      checkUpdateIsCalled();
+    });
+
+    it('does not create new object when count is 0', () => {
+      const habits = presenter.getHabits();
+      presenter.reset(update);
+      const updatedHabits = presenter.getHabits();
+
+      expect(updatedHabits[1]).toBe(habits[1]);
+      // toEqual은 object안에 있는 data의 값을 비교하지만
+      // toBe는 object의 참조값을 검사한다
+    });
   });
 
   function checkUpdateIsCalled() {
