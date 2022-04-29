@@ -20,17 +20,23 @@ const Habit = memo(({ habit, onIncrement, onDecrement, onDelete }) => {
       <div className="button-container">
         <button
           className="habit-button habit-increase"
+          title="increase"
           onClick={handleIncrement}
         >
           <i className="fas fa-plus-square"></i>
         </button>
         <button
           className="habit-button habit-decrease"
+          title="decrease"
           onClick={handleDecrement}
         >
           <i className="fas fa-minus-square"></i>
         </button>
-        <button className="habit-button habit-delete" onClick={handleDelete}>
+        <button
+          className="habit-button habit-delete"
+          title="delete"
+          onClick={handleDelete}
+        >
           <i className="fas fa-trash"></i>
         </button>
       </div>
