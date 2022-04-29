@@ -5,7 +5,12 @@ const Navbar = memo((props) => {
     <nav className="navbar">
       <i className="navbar-logo fas fa-leaf"></i>
       <span>Habit Tracker</span>
-      <span className="navbar-count">{props.totalCount}</span>
+      <span //
+        className="navbar-count"
+        data-testid="total-count"
+      >
+        {props.totalCount}
+      </span>
     </nav>
   );
 });
