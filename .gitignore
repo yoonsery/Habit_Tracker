@@ -9,7 +9,11 @@
 
 # testing
 /coverage
-/cypress
+/cypress/*
+!/cypress/integration
+/cypress/integration/*
+!/cypress/integration/app_spec.js
+
 
 # production
 /build
