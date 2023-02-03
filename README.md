@@ -42,14 +42,6 @@ Users are able to
 
   - Bring the business logic to the class HabitPresenter 
 
-### To prevent enroll empty string use trim()
-
-```js
-  if (name.trim() === '') {
-      formRef.current.reset();
-      return;
-    }
-```
 
 ## Setup
 
